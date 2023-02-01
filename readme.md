@@ -2,7 +2,9 @@
 
 You work for a company that publishes a small digital storefront that sells promotional goods for touring bands. The codebase is old, and many developers with different preferences for function syntax have worked on it over the past few years.
 
-Your job is refactoring some parts of the code to reduce unnecessary repetition (DRY: Don't Repeat Yourself). There are also some known bugs in the code that need to be fixed caused by incorrect use of function calls.
+Your job is to:
+1. Refactoring some parts of the code to reduce unnecessary repetition (DRY: Don't Repeat Yourself). 
+2. Fix the known bugs in the code that need to be fixed caused by incorrect use of function calls.
 
 For this project, there won't be any need to open a browser. All of your code will be running on Node.js, and all your results will be visible in your terminal.
 
