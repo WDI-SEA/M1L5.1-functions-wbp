@@ -2,6 +2,7 @@
 
 You work for a company that publishes a small digital storefront that sells promotional goods for touring bands. The codebase is old, and many developers with different preferences for function syntax have worked on it over the past few years.
 
+#### Requirements
 Your job is to:
 1. Refactoring some parts of the code to reduce unnecessary repetition (DRY: Don't Repeat Yourself). 
 2. Fix the known bugs in the code that need to be fixed caused by incorrect use of function calls.
