@@ -24,6 +24,8 @@ For this project, there won't be any need to open a browser. All of your code wi
 - Fix the bug in the `areAllIdsUnique()` function in the `parameters.js` file.
 - In the `firstClassFunctions.js` file, rework the `formatProducts()` function with DRYer code.
 
+---
+
 ![Coding Practice](/assets/banner-coding.png)
 
 ### Step 1:
