@@ -17,8 +17,8 @@ For this project, there won't be any need to open a browser. All of your code wi
 
 ![Tickets](/assets/banner-tickets.png)
 
-[Trello Board Tickets](https://trello.com/b/03VNnqzX/javascript-functions)
-![Trello Board](/assets/trello-board-js-functions.png)
+[Trello Board Tickets](https://trello.com/b/V2tKlN6Y/javascript-functions)
+![Trello Board](/assets/M1L5.1-functions-trello-board.png)
 - In the `refactor.js` file, rework the `previewFullPrice()` function with DRYer code.
 - Fix the error in the `hoisting.js` file.
 - Fix the bug in the `areAllIdsUnique()` function in the `parameters.js` file.
