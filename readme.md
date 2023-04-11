@@ -30,7 +30,7 @@ For this project, there won't be any need to open a browser. All of your code wi
 
 ### Step 1:
 
-- Fork and clone this repository.
+- Fork and clone [this](https://git.generalassemb.ly/SEI-Standard-Curriculum/M1L5.1-functions-wbp) repository. (Make sure you are logged in to your GitHub Enterprise account)
 
 ### Step 2:
 
