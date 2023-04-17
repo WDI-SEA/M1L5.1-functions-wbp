@@ -30,12 +30,12 @@ For this project, there won't be any need to open a browser. All of your code wi
 
 ![Coding Practice](./assets/banner-coding.png)
 
-### Step 1:
+### Preparatory Steps:
 
 - Fork and clone [this](https://git.generalassemb.ly/SEI-Standard-Curriculum/M1L5.1-functions-wbp) repository. Make sure you are logged in to your GitHub Enterprise account.
 - Install Jest and any other dependencies using this command: `npm i`
 
-### Step 2:
+### Step 1:
 
 - Open your editor and navigate to `/Refactoring/refactor.js`
 
@@ -48,7 +48,7 @@ For this project, there won't be any need to open a browser. All of your code wi
 - You can run the tests for just this exercise using this command:
   - `jest ./Refactoring/refactor.test.js`
 
-### Step 3:
+### Step 2:
 
 - Navigate to `/hoisting/hoisting.js`
 
@@ -59,7 +59,7 @@ For this project, there won't be any need to open a browser. All of your code wi
 - You can run the tests for just this exercise using this command:
   - `jest ./hoisting/hoisting.test.js`
 
-### Step 4:
+### Step 3:
 
 - Navigate to `/parameters/parameters.js`
 
@@ -86,7 +86,7 @@ Later in your JavaScript career, it is likely that you will work with a technolo
 
 </details>
 
-### Step 5:
+### Step 4:
 
 - Navigate to `/firstClassFunctions/firstClassFunctions.js`
 
@@ -101,6 +101,8 @@ Later in your JavaScript career, it is likely that you will work with a technolo
 - Can you refactor this code by extracting the repeated behavior into a function?
 
 - This code already works and passes the tests. You will know your refactoring is successful if the code becomes shorter, and the tests still pass after your changes.
+
+### Wrap-up
 
 - You can run the tests for just this exercise using this command:
   - `jest firstClassFunctions/firstClassFunctions.test.js`
