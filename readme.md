@@ -10,9 +10,12 @@ Your job is refactoring some parts of the code to reduce unnecessary repetition 
 
 ![Requirements](./assets/banner-requirements.png)
 
-1. Refactoring some parts of the code to reduce unnecessary repetition (DRY: Don't Repeat Yourself). 
+1. Refactoring some parts of the code to reduce unnecessary repetition (DRY: Don't Repeat Yourself).
+    - In the `refactor.js` file, rework the `previewFullPrice()` function with DRYer code.
+    - In the `firstClassFunctions.js` file, rework the `formatProducts()` function with DRYer code. 
 2. Fix the known bugs in the code caused by incorrect use of function calls.
-
+    - Fix the error in the `hoisting.js` file.
+    - Fix the bug in the `areAllIdsUnique()` function in the `parameters.js` file.
 For this project, there won't be any need to open a browser. All of your code will be running on Node.js, and all your results will be visible in your terminal.
 
 ---
@@ -21,10 +24,7 @@ For this project, there won't be any need to open a browser. All of your code wi
 
 <!-- [Kanban Board Tickets](https://trello.com/b/V2tKlN6Y/javascript-functions) -->
 ![Kanban Board](./assets/M1L5.1-functions-trello-board.png)
-- In the `refactor.js` file, rework the `previewFullPrice()` function with DRYer code.
-- Fix the error in the `hoisting.js` file.
-- Fix the bug in the `areAllIdsUnique()` function in the `parameters.js` file.
-- In the `firstClassFunctions.js` file, rework the `formatProducts()` function with DRYer code.
+
 
 ---
 
