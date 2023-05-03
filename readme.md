@@ -67,11 +67,14 @@ For this project, there won't be any need to open a browser. All of your code wi
 
 - This file contains two functions:
 
-  - isUnique() is a function that takes a list of IDs, and a single ID, and returns true if that single ID is unique in the list.
+  - `isUnique()` is a function that takes a list of IDs, and a single ID, and returns true if that single ID is unique in the list.
 
-  - areAllIdsUnique() is a function that takes an array of product IDs and returns true if _ALL_ the IDs are unique.
+  - `areAllIdsUnique()` is a function that takes an array of product IDs and returns true if _ALL_ the IDs are unique.
 
-- There is a bug on one line in the areAllIdsUnique() function. Can you find it and fix it so the function works as expected?
+- There is a bug on one line in the `areAllIdsUnique()` function. Can you find it and fix it so the function works as expected?
+
+- You can run the tests for just this exercise using this command:
+  - `npx jest parameters/parameters.test.js`
 
 <details>
 
@@ -79,26 +82,27 @@ For this project, there won't be any need to open a browser. All of your code wi
 
 This one is pretty tricky because JavaScript is very loose with the types of data you pass as parameters to functions.
 
-In this line: ` const  isThisIdUnique = isUnique(id, allIds);` are the arguments to isUnique() passed in the correct order? To find out, try reading the function declaration for isUnique(), specifically pay attention to the parameters that isUnique() accepts.
+In this line: ` const  isThisIdUnique = isUnique(id, allIds);` are the arguments to `isUnique()` passed in the correct order? To find out, try reading the function declaration for `isUnique()`, specifically pay attention to the parameters that `isUnique()` accepts.
 
 Later in your JavaScript career, it is likely that you will work with a technology called TypeScript, which is very powerful for helping avoid bugs like this.
 
-- You can run the tests for just this exercise using this command:
-  - `npx jest parameters/parameters.test.js`
-
 </details>
+
+
+
+
 
 ### Step 4:
 
 - Navigate to `/firstClassFunctions/firstClassFunctions.js`
 
-- This file contains a function called formatProducts()
+- This file contains a function called `formatProducts()`
 
 - Just like in `Refactoring/refactor.js`, we want to reduce repetition in this function by taking repetitive code and extracting it into a named function.
 
-- On lines 21, 34, and 47, we call .map() with an anonymous function once each for the carousel, grid, and sidebar. Notice that the anonymous function for each has the exact same behavior, since we format the data the same in each place.
+- On lines 21, 34, and 47, we call `.map()` with an anonymous function once each for the carousel, grid, and sidebar. Notice that the anonymous function for each has the exact same behavior, since we format the data the same in each place.
 
-- Instead of using this repetitive anonymous function, could we instead move that behavior into a named function? Once we've done that, we can pass that named function as the argument to .map() once each for grid, sidebar, and carousel, shortening our code substantially.
+- Instead of using this repetitive anonymous function, could we instead move that behavior into a named function? Once we've done that, we can pass that named function as the argument to `.map()` once each for grid, sidebar, and carousel, shortening our code substantially.
 
 - Can you refactor this code by extracting the repeated behavior into a function?
 
