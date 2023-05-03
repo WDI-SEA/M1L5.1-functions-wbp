@@ -33,6 +33,7 @@ For this project, there won't be any need to open a browser. All of your code wi
 ### Preparatory Steps:
 
 - Fork and clone [this](https://git.generalassemb.ly/SEI-Standard-Curriculum/M1L5.1-functions-wbp) repository. Make sure you are logged in to your GitHub Enterprise account.
+    -  After you've forked the repo, clone the repo into your `~/code` folder and `cd` into the newly created folder. 
 - Install Jest and any other dependencies using this command: `npm i`
 
 ### Step 1:
