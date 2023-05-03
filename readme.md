@@ -16,6 +16,7 @@ Your job is refactoring some parts of the code to reduce unnecessary repetition 
 2. Fix the known bugs in the code caused by incorrect use of function calls.
     - Fix the error in the `hoisting.js` file.
     - Fix the bug in the `areAllIdsUnique()` function in the `parameters.js` file.
+
 For this project, there won't be any need to open a browser. All of your code will be running on Node.js, and all your results will be visible in your terminal.
 
 ---
@@ -34,7 +35,7 @@ For this project, there won't be any need to open a browser. All of your code wi
 
 - Fork and clone [this](https://git.generalassemb.ly/SEI-Standard-Curriculum/M1L5.1-functions-wbp) repository. Make sure you are logged in to your GitHub Enterprise account.
     -  After you've forked the repo, clone the repo into your `~/code` folder and `cd` into the newly created folder. 
-- Install Jest and any other dependencies using this command: `npm i`
+- Install Jest and any other dependencies using this command: `npx jest ./Refactoring/refactor.test.js`
 
 ### Step 1:
 
@@ -47,7 +48,7 @@ For this project, there won't be any need to open a browser. All of your code wi
 - The code already returns the expected result and passes the automated test, so you will know your refactor is successful if it shortens the code, and the tests still pass after your changes.
 
 - You can run the tests for just this exercise using this command:
-  - `jest ./Refactoring/refactor.test.js`
+  - `npx jest ./Refactoring/refactor.test.js`
 
 ### Step 2:
 
@@ -58,7 +59,7 @@ For this project, there won't be any need to open a browser. All of your code wi
 - This code will throw an error when run, can you find a way to fix it by only re-ordering the lines of code? If you get stuck, check the lecture notes on how different types of function declarations and expressions are hoisted.
 
 - You can run the tests for just this exercise using this command:
-  - `jest ./hoisting/hoisting.test.js`
+  - `npx jest ./hoisting/hoisting.test.js`
 
 ### Step 3:
 
@@ -83,7 +84,7 @@ In this line: ` const  isThisIdUnique = isUnique(id, allIds);` are the arguments
 Later in your JavaScript career, it is likely that you will work with a technology called TypeScript, which is very powerful for helping avoid bugs like this.
 
 - You can run the tests for just this exercise using this command:
-  - `jest parameters/parameters.test.js`
+  - `npx jest parameters/parameters.test.js`
 
 </details>
 
@@ -106,11 +107,7 @@ Later in your JavaScript career, it is likely that you will work with a technolo
 ### Wrap-up
 
 - You can run the tests for just this exercise using this command:
-  - `jest firstClassFunctions/firstClassFunctions.test.js`
-- To prepare to run the automated tests, follow these instructions:
-  - Open your console and navigate into the cloned git repository for this project
-  - run `npm i`
-- To run the automated tests, run `npm run test`
+  - `npx jest firstClassFunctions/firstClassFunctions.test.js`
 - The tests will run the functions you've modified, and ensure they return the correct values
 - If any of the tests are marked as failed, you can scroll up through your console history to see an explanation of which functions need further fixes
-- If all the tests are marked as passed, then you have successfully completed the exercise
+- If all the tests are marked as passed, then you have successfully completed the exercise.
