@@ -33,7 +33,7 @@ For this project, there won't be any need to open a browser. All of your code wi
 
 ### Preparatory Steps:
 
-- Fork and clone [this](https://git.generalassemb.ly/SEI-Standard-Curriculum/M1L5.1-functions-wbp) repository. Make sure you are logged in to your GitHub Enterprise account.
+- Fork and clone [this](https://git.generalassemb.ly/team-wag/M1L5.1-functions-wbp) repository. Make sure you are logged in to your GitHub Enterprise account.
     -  After you've forked the repo, clone the repo into your `~/code` folder and `cd` into the newly created folder. 
 - Install Jest and any other dependencies using this command: `npx jest ./Refactoring/refactor.test.js`
 
@@ -115,3 +115,4 @@ Later in your JavaScript career, it is likely that you will work with a technolo
 - The tests will run the functions you've modified, and ensure they return the correct values
 - If any of the tests are marked as failed, you can scroll up through your console history to see an explanation of which functions need further fixes
 - If all the tests are marked as passed, then you have successfully completed the exercise.
+
