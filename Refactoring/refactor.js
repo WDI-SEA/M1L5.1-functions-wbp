@@ -8,21 +8,16 @@
  * Can you refactor it by writing functions that reduce repetition?
  */
 function previewFullPrice(salesTax, shippingPrice) {
-    const shirtPrice = 30.99;
-    const sweatshirtPrice = 40.99;
-    const smallPosterPrice = 15.99;
-    const largePosterPrice = 22.99;
-    const mugPrice = 12.99;
-
     const prices = [
-        shirtPrice,
-        sweatshirtPrice,
-        smallPosterPrice,
-        largePosterPrice,
-        mugPrice,
+        { name: "shirt", price: 30.99 },
+        { name: "sweatShirt", price: 40.99 },
+        { name: "smallPoster", price: 15.99 },
+        { name: "largePoster", price: 22.99 },
+        { name: "mug", price: 12.99 },
     ];
-
-    return prices.map((n) => (n * (1 + salesTax) + shippingPrice).toFixed(2));
+    return prices.map((n) =>
+        (n.price * (1 + salesTax) + shippingPrice).toFixed(2)
+    );
 }
 
 module.exports = previewFullPrice;
