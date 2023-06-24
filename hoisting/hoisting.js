@@ -13,28 +13,28 @@
  */
 
 function greetingGenerator(customerName, storeName) {
-  let greeting = "";
+    let greeting = "";
 
-  greeting += hello();
-  greeting += customer(customerName);
-  greeting += welcome();
-  greeting += store(storeName);
+    const customer = (customer) => `${customer}! `;
 
-  const customer = (customer) => `${customer}! `;
+    function store(storeName) {
+        return `${storeName}!`;
+    }
 
-  function store(storeName) {
-    return `${storeName}!`;
-  }
+    const hello = function () {
+        return "Hello ";
+    };
 
-  const hello = function () {
-    return "Hello ";
-  };
+    function welcome() {
+        return "Welcome to the ";
+    }
 
-  function welcome() {
-    return "Welcome to the ";
-  }
+    greeting += hello();
+    greeting += customer(customerName);
+    greeting += welcome();
+    greeting += store(storeName);
 
-  return greeting;
+    return greeting;
 }
 
 console.log(greetingGenerator("John Doe", "JavaScript Store"));
