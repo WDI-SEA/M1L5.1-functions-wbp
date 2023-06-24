@@ -1,14 +1,14 @@
 const customerIds = [
-  "54402779",
-  "39143786",
-  "77408236",
-  "35736350",
-  "07118545",
-  "21452698",
-  "55706737",
-  "40258035",
-  "39143786",
-  "52017607",
+    "54402779",
+    "39143786",
+    "77408236",
+    "35736350",
+    "07118545",
+    "21452698",
+    "55706737",
+    "40258035",
+    "39143786",
+    "52017607",
 ];
 
 /**
@@ -24,13 +24,13 @@ const customerIds = [
  * Can you spot the bug?  (hint: its just one line of code in this function)
  */
 function areAllIdsUnique(allIds) {
-  for (let id of allIds) {
-    const isThisIdUnique = isUnique(id, allIds);
-    if (!isThisIdUnique) {
-      return false;
+    for (let id of allIds) {
+        const isThisIdUnique = isUnique(allIds, id);
+        if (!isThisIdUnique) {
+            return false;
+        }
     }
-  }
-  return true;
+    return true;
 }
 
 console.log(areAllIdsUnique(customerIds));
@@ -43,12 +43,12 @@ console.log(areAllIdsUnique(customerIds));
  * thisId should be the current ID we are checking for uniqueness
  */
 function isUnique(allIds, thisId) {
-  for (let i = allIds.indexOf(thisId); i < allIds.length; i++) {
-    if (allIds[i] === thisId) {
-      return false;
+    for (let i = allIds.indexOf(thisId); i < allIds.length; i++) {
+        if (allIds[i] === thisId) {
+            return false;
+        }
     }
-  }
-  return true;
+    return true;
 }
 
 module.exports = areAllIdsUnique;
