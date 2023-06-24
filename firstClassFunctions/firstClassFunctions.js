@@ -16,52 +16,23 @@ const sidebarProducts = ["sweatpants", "shorts", "skirt", "baseball_cap"];
  *
  * Can you refactor this code to be less repetitive?
  */
-
+// This wont work for arbitrarily nesting as it would blow the stack
+// recursively applies function to elements inside nested arrays
+function walk(arrs, fn) {
+    for (let i = 0; i < arrs.length; i++) {
+        if (typeof arrs[i] === "object") arrs[i] = walk(arrs[i], fn);
+        else arrs[i] = fn(arrs[i]);
+    }
+    return arrs;
+}
+function capitalize(s) {
+    return s.charAt(0).toUpperCase() + s.substring(1);
+}
+function formatProduct(product) {
+    return product.split("_").map(capitalize).join(" ");
+}
 function formatProducts(carousel, grid, sidebar) {
-  const carouselProductsReformatted = carouselProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
-
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
-
-  const gridProductsReformatted = gridProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
-
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
-
-  const sidebarProductsReformatted = sidebarProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
-
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
-
-  return [
-    carouselProductsReformatted,
-    gridProductsReformatted,
-    sidebarProductsReformatted,
-  ];
+    return walk([carousel, grid, sidebar], formatProduct);
 }
 
 console.log(formatProducts(carouselProducts, gridProducts, sidebarProducts));
