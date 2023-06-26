@@ -53,15 +53,16 @@ const products = {
 };
 
 function previewFullPrice(salesTax, shippingPrice) {
-  Object.values(products).forEach(val => { 
+  Object.values(products).forEach(val => {
     const priceAfterTax = ([val] * (1 + salesTax));
     const priceAfterShipping = priceAfterTax + shippingPrice;
     const priceAfterShippingRounded = priceAfterShipping.toFixed(2);
-    parseInt(priceAfterShippingRounded);
-    return console.log(priceAfterShippingRounded);
+    // parseInt(priceAfterShippingRounded);
+    return console.log([priceAfterShippingRounded]);
   })
 };
 
+previewFullPrice(0.08, 4.0);
 
 
 
