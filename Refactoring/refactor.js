@@ -13,28 +13,12 @@ function previewFullPrice(salesTax, shippingPrice) {
   const smallPosterPrice = 15.99;
   const largePosterPrice = 22.99;
   const mugPrice = 12.99;
-
-  shirtPriceAfterTax = shirtPrice * (1 + salesTax);
-  shirtPriceAfterShipping = shirtPriceAfterTax + shippingPrice;
-  shirtPriceAfterShippingRounded = shirtPriceAfterShipping.toFixed(2);
-
-  sweatshirtPriceAfterTax = sweatshirtPrice * (1 + salesTax);
-  sweatshirtPriceAfterShipping = sweatshirtPriceAfterTax + shippingPrice;
-  sweatshirtPriceAfterShippingRounded = sweatshirtPriceAfterShipping.toFixed(2);
-
-  smallPosterPriceAfterTax = smallPosterPrice * (1 + salesTax);
-  smallPosterPriceAfterShipping = smallPosterPriceAfterTax + shippingPrice;
-  smallPosterPriceAfterShippingRounded =
-    smallPosterPriceAfterShipping.toFixed(2);
-
-  largePosterPriceAfterTax = largePosterPrice * (1 + salesTax);
-  largePosterPriceAfterShipping = largePosterPriceAfterTax + shippingPrice;
-  largePosterPriceAfterShippingRounded =
-    largePosterPriceAfterShipping.toFixed(2);
-
-  mugPriceAfterTax = mugPrice * (1 + salesTax);
-  mugPriceAfterShipping = mugPriceAfterTax + shippingPrice;
-  mugPriceAfterShippingRounded = mugPriceAfterShipping.toFixed(2);
+ 
+  shirtPriceAfterShippingRounded = priceAfterTaxAndShippingAndRounded(shirtPrice, salesTax, shippingPrice);
+  sweatshirtPriceAfterShippingRounded = priceAfterTaxAndShippingAndRounded(sweatshirtPrice, salesTax, shippingPrice);
+  smallPosterPriceAfterShippingRounded = priceAfterTaxAndShippingAndRounded(smallPosterPrice, salesTax, shippingPrice);
+  largePosterPriceAfterShippingRounded = priceAfterTaxAndShippingAndRounded(largePosterPrice, salesTax, shippingPrice);
+  mugPriceAfterShippingRounded = priceAfterTaxAndShippingAndRounded(mugPrice, salesTax, shippingPrice);
 
   return [
     shirtPriceAfterShippingRounded,
@@ -43,6 +27,10 @@ function previewFullPrice(salesTax, shippingPrice) {
     largePosterPriceAfterShippingRounded,
     mugPriceAfterShippingRounded,
   ];
+}
+
+function priceAfterTaxAndShippingAndRounded(price, salesTax, shippingPrice) {
+  return ((price * (1 + salesTax)) + shippingPrice).toFixed(2);
 }
 
 module.exports = previewFullPrice;

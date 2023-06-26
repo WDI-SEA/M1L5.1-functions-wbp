@@ -18,50 +18,31 @@ const sidebarProducts = ["sweatpants", "shorts", "skirt", "baseball_cap"];
  */
 
 function formatProducts(carousel, grid, sidebar) {
-  const carouselProductsReformatted = carouselProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
 
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
-
-  const gridProductsReformatted = gridProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
-
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
-
-  const sidebarProductsReformatted = sidebarProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
-
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
+  const carouselProductsReformatted = productsReformated(carouselProducts);
+  const gridProductsReformatted = productsReformated(gridProducts);
+  const sidebarProductsReformatted = productsReformated(sidebarProducts);
 
   return [
     carouselProductsReformatted,
     gridProductsReformatted,
     sidebarProductsReformatted,
   ];
+}
+
+function productsReformated (products) {
+  return products.map((product) => {
+    // replace underscores with spaces
+    let spacedProduct = product.replace("_", " ");
+
+    //capitalize each word
+    productWords = spacedProduct.split(" ");
+    capitalizedProductWords = productWords.map(
+      (word) => word.charAt(0).toUpperCase() + word.substring(1)
+    );
+    capitalizedProduct = capitalizedProductWords.join(" ");
+    return capitalizedProduct;
+  });
 }
 
 console.log(formatProducts(carouselProducts, gridProducts, sidebarProducts));
