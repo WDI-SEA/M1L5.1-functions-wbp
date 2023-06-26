@@ -21,12 +21,6 @@ function greetingGenerator(customerName, storeName) {
   const customer = (customer) => `${customer}! `;
   let greeting = "";
 
-  greeting += hello();
-  greeting += customer(customerName);
-  greeting += welcome();
-  greeting += store(storeName);
-
-
   function store(storeName) {
     return `${storeName}!`;
   }
@@ -35,6 +29,10 @@ function greetingGenerator(customerName, storeName) {
   function welcome() {
     return "Welcome to the ";
   }
+  greeting += hello();
+  greeting += customer(customerName);
+  greeting += welcome();
+  greeting += store(storeName);
 
   return greeting;
 }
