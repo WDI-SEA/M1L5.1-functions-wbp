@@ -25,7 +25,8 @@ const customerIds = [
  */
 function areAllIdsUnique(allIds) {
   for (let id of allIds) {
-    const isThisIdUnique = isUnique(id, allIds);
+    const isThisIdUnique = isUnique(allIds, id);
+    console.log(isThisIdUnique,id)
     if (!isThisIdUnique) {
       return false;
     }
@@ -42,7 +43,11 @@ console.log(areAllIdsUnique(customerIds));
  * allIds should be the list of all customer IDs
  * thisId should be the current ID we are checking for uniqueness
  */
+index = 1
+const ids = ['a', 'b', 'c', 'd']
+
 function isUnique(allIds, thisId) {
+  //get the index of the id you want
   for (let i = allIds.indexOf(thisId); i < allIds.length; i++) {
     if (allIds[i] === thisId) {
       return false;
@@ -50,5 +55,7 @@ function isUnique(allIds, thisId) {
   }
   return true;
 }
+
+//console.log(isUnique('b', ids))
 
 module.exports = areAllIdsUnique;
