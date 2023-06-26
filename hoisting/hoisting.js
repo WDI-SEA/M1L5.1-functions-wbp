@@ -12,23 +12,31 @@
  * file so that it returns the correct string?
  */
 
+
+
+const hello = function () {
+  return "Hello ";
+};
+
+const customer = (customer) => `${customer}! `;
+
+
 function greetingGenerator(customerName, storeName) {
   let greeting = "";
-
   greeting += hello();
   greeting += customer(customerName);
   greeting += welcome();
   greeting += store(storeName);
 
-  const customer = (customer) => `${customer}! `;
+  // const customer = (customer) => `${customer}! `;
 
   function store(storeName) {
     return `${storeName}!`;
   }
 
-  const hello = function () {
-    return "Hello ";
-  };
+  // const hello = function () {
+  //   return "Hello ";
+  // };
 
   function welcome() {
     return "Welcome to the ";
