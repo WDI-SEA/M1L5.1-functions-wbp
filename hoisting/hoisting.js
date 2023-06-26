@@ -10,25 +10,25 @@
  *
  * Without changing any code (only re-ordering the lines), can you fix this
  * file so that it returns the correct string?
- */
+*/
 
 function greetingGenerator(customerName, storeName) {
+  const hello = function () {
+    return "Hello ";
+  };
+  const customer = (customer) => `${customer}! `;
+  
   let greeting = "";
-
   greeting += hello();
   greeting += customer(customerName);
   greeting += welcome();
   greeting += store(storeName);
 
-  const customer = (customer) => `${customer}! `;
 
   function store(storeName) {
     return `${storeName}!`;
   }
 
-  const hello = function () {
-    return "Hello ";
-  };
 
   function welcome() {
     return "Welcome to the ";
