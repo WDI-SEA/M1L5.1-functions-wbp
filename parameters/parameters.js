@@ -23,6 +23,10 @@ const customerIds = [
  *
  * Can you spot the bug?  (hint: its just one line of code in this function)
  */
+function simplerAreAllIdsUnique(allids) {
+    let setOfIds = new Set(allids);
+    return setOfIds.size === allids.length;
+}
 function areAllIdsUnique(allIds) {
     for (let id of allIds) {
         const isThisIdUnique = isUnique(allIds, id);

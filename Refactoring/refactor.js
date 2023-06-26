@@ -7,6 +7,7 @@
  *
  * Can you refactor it by writing functions that reduce repetition?
  */
+
 function previewFullPrice(salesTax, shippingPrice) {
     const prices = [
         { name: "shirt", price: 30.99 },
@@ -15,9 +16,11 @@ function previewFullPrice(salesTax, shippingPrice) {
         { name: "largePoster", price: 22.99 },
         { name: "mug", price: 12.99 },
     ];
-    return prices.map((n) =>
-        (n.price * (1 + salesTax) + shippingPrice).toFixed(2)
-    );
+
+    function computePrice(o) {
+        return (o.price * (1 + salesTax) + shippingPrice).toFixed(2);
+    }
+    return prices.map(computePrice);
 }
 
 module.exports = previewFullPrice;
