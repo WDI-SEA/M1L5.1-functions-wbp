@@ -23,10 +23,51 @@ const customerIds = [
  *
  * Can you spot the bug?  (hint: its just one line of code in this function)
  */
+
+// ORIGINALLY PROVIDED CODE FROM GENERAL ASSEMBLY
+
+// function areAllIdsUnique(allIds) {
+//   for (let id of allIds) {
+//     const isThisIdUnique = isUnique(id, allIds);
+//     if (!isThisIdUnique) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(areAllIdsUnique(customerIds));
+
+/**
+ * This is a function that checks if an ID is unique in the list.
+ * You won't need to change this code.
+ *
+ * allIds should be the list of all customer IDs
+ * thisId should be the current ID we are checking for uniqueness
+ */
+
+// ORIGINALLY PROVIDED CODE FROM GENERAL ASSEMBLY
+
+// function isUnique(allIds, thisId) {
+//   for (let i = allIds.indexOf(thisId); i < allIds.length; i++) {
+//     if (allIds[i] === thisId) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// module.exports = areAllIdsUnique;
+
+
+
+
+//Leah's solution below removing the extra "!" before "isThisIdUnique" in the line with "if (isThisIdUnique) {". No changes were made to the second block of code.
+
 function areAllIdsUnique(allIds) {
   for (let id of allIds) {
     const isThisIdUnique = isUnique(id, allIds);
-    if (!isThisIdUnique) {
+    if (isThisIdUnique) {
       return false;
     }
   }
@@ -42,6 +83,7 @@ console.log(areAllIdsUnique(customerIds));
  * allIds should be the list of all customer IDs
  * thisId should be the current ID we are checking for uniqueness
  */
+
 function isUnique(allIds, thisId) {
   for (let i = allIds.indexOf(thisId); i < allIds.length; i++) {
     if (allIds[i] === thisId) {

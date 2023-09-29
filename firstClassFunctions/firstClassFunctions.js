@@ -17,53 +17,77 @@ const sidebarProducts = ["sweatpants", "shorts", "skirt", "baseball_cap"];
  * Can you refactor this code to be less repetitive?
  */
 
-function formatProducts(carousel, grid, sidebar) {
-  const carouselProductsReformatted = carouselProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
+// ORIGINALLY PROVIDED CODE FROM GENERAL ASSEMBLY
 
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
+// function formatProducts(carousel, grid, sidebar) {
+//   const carouselProductsReformatted = carouselProducts.map((product) => {
+//     // replace underscores with spaces
+//     let spacedProduct = product.replace("_", " ");
 
-  const gridProductsReformatted = gridProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
+//     //capitalize each word
+//     productWords = spacedProduct.split(" ");
+//     capitalizedProductWords = productWords.map(
+//       (word) => word.charAt(0).toUpperCase() + word.substring(1)
+//     );
+//     capitalizedProduct = capitalizedProductWords.join(" ");
+//     return capitalizedProduct;
+//   });
 
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
+//   const gridProductsReformatted = gridProducts.map((product) => {
+//     // replace underscores with spaces
+//     let spacedProduct = product.replace("_", " ");
 
-  const sidebarProductsReformatted = sidebarProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
+//     //capitalize each word
+//     productWords = spacedProduct.split(" ");
+//     capitalizedProductWords = productWords.map(
+//       (word) => word.charAt(0).toUpperCase() + word.substring(1)
+//     );
+//     capitalizedProduct = capitalizedProductWords.join(" ");
+//     return capitalizedProduct;
+//   });
 
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
+//   const sidebarProductsReformatted = sidebarProducts.map((product) => {
+//     // replace underscores with spaces
+//     let spacedProduct = product.replace("_", " ");
 
-  return [
-    carouselProductsReformatted,
-    gridProductsReformatted,
-    sidebarProductsReformatted,
-  ];
+//     //capitalize each word
+//     productWords = spacedProduct.split(" ");
+//     capitalizedProductWords = productWords.map(
+//       (word) => word.charAt(0).toUpperCase() + word.substring(1)
+//     );
+//     capitalizedProduct = capitalizedProductWords.join(" ");
+//     return capitalizedProduct;
+//   });
+
+//   return [
+//     carouselProductsReformatted,
+//     gridProductsReformatted,
+//     sidebarProductsReformatted,
+//   ];
+// }
+
+// console.log(formatProducts(carouselProducts, gridProducts, sidebarProducts));
+
+// module.exports = formatProducts;
+
+
+
+
+// Leah's solution that reduced to 16 lines of code by only writing the "formatProductName" function once, then calling it for each section name via .map().
+
+function formatProductName(product) {
+  let spacedProduct = product.replace("_", " ");
+  let productWords = spacedProduct.split(" ");
+  let capitalizedProductWords = productWords.map(
+    (word) => word.charAt(0).toUpperCase() + word.substring(1)
+  );
+  let capitalizedProduct = capitalizedProductWords.join(" ");
+  return capitalizedProduct;
 }
-
-console.log(formatProducts(carouselProducts, gridProducts, sidebarProducts));
-
+function formatProducts(carousel, grid, sidebar) {
+  const carouselProductsReformatted = carousel.map(formatProductName);
+  const gridProductsReformatted = grid.map(formatProductName);
+  const sidebarProductsReformatted = sidebar.map(formatProductName);
+  return [carouselProductsReformatted, gridProductsReformatted, sidebarProductsReformatted];
+}
 module.exports = formatProducts;

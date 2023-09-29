@@ -12,6 +12,48 @@
  * file so that it returns the correct string?
  */
 
+// ORIGINALLY PROVIDED CODE FROM GENERAL ASSEMBLY
+
+// function greetingGenerator(customerName, storeName) {
+//   let greeting = "";
+
+//   greeting += hello();
+//   greeting += customer(customerName);
+//   greeting += welcome();
+//   greeting += store(storeName);
+
+//   const customer = (customer) => `${customer}! `;
+
+//   function store(storeName) {
+//     return `${storeName}!`;
+//   }
+
+//   const hello = function () {
+//     return "Hello ";
+//   };
+
+//   function welcome() {
+//     return "Welcome to the ";
+//   }
+
+//   return greeting;
+// }
+
+// console.log(greetingGenerator("John Doe", "JavaScript Store"));
+
+// module.exports = greetingGenerator;
+
+
+
+
+// Leah's solution below that changes the order of the function expressions (brings them to the top). This way the cascading functions can be used!
+
+const hello = function () {
+  return "Hello ";
+};
+
+const customer = (customer) => `${customer}! `;
+
 function greetingGenerator(customerName, storeName) {
   let greeting = "";
 
@@ -20,15 +62,9 @@ function greetingGenerator(customerName, storeName) {
   greeting += welcome();
   greeting += store(storeName);
 
-  const customer = (customer) => `${customer}! `;
-
   function store(storeName) {
     return `${storeName}!`;
   }
-
-  const hello = function () {
-    return "Hello ";
-  };
 
   function welcome() {
     return "Welcome to the ";
