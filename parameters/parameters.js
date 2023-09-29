@@ -98,4 +98,33 @@ module.exports = areAllIdsUnique;
 
 
 
+// With Weston in the morning (flip allIds & id in line "const isThisIdUnique = isUnique(allIds, id);")
+
+// function areAllIdsUnique(allIds) {
+//   for (let id of allIds) {
+//     const isThisIdUnique = isUnique(allIds, id);
+//     if (!isThisIdUnique) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(areAllIdsUnique(customerIds));
+
+
+// function isUnique(allIds, thisId) {
+//   for (let i = allIds.indexOf(thisId); i < allIds.length; i++) {
+//     if (allIds[i] === thisId) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// module.exports = areAllIdsUnique;
+
+
+
+
 
