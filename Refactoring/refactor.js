@@ -8,6 +8,8 @@
  * Can you refactor it by writing functions that reduce repetition?
  */
 
+////////////////////////////////////////////////
+
 const merchPriceArray = [
   {name: 'shirt', price: 30.99},
   {name: 'sweatshirt', price: 40.99},
@@ -28,15 +30,14 @@ function previewFullPrice(salesTax, shippingPrice) {
     priceAfterShippingRounded = priceAfterShipping.toFixed(2);
 // Push the value of ^ to your finalPrices array.    
     finalPrices.push(priceAfterShippingRounded);
-// Finally, return the finalPrices array.
   });
-  console.log(finalPrices);
+// Finally, return the finalPrices array.
   return finalPrices;
 };
 
 module.exports = previewFullPrice
 
-//////////////////////////////////////////////////////////////
+//////////////////////////////////////////
 // const priceAfterTax = (itemPrice) =>
 // function previewFullPrice(salesTax, shippingPrice) {
 //   const shirtPrice = 30.99;
