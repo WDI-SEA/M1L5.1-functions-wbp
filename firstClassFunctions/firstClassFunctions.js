@@ -20,34 +20,22 @@ const sidebarProducts = ["sweatpants", "shorts", "skirt", "baseball_cap"];
 function formatProducts(carousel, grid, sidebar) {
 // arrow functions drop 'function' and add arrow
 
-  function reformat(place){
-    place.map((product) => { //anon
-      
-        // replace underscores with spaces
-        let spacedProduct = product.replace("_", " ");
-    
-        //capitalize each word
-        productWords = spacedProduct.split(" ");
+  const reformatProd = (product) => {
+    //Here is the function .map is calling in the og code:
 
-        capitalizedProductWords = productWords.map(
-          (word) => word.charAt(0).toUpperCase() + word.substring(1)
-        );
-        
-        //console.log(capitalizedProductWords)
-      capitalizedProductWords = productWords.map(
-        (word) => word.charAt(0).toUpperCase() + word.substring(1)
-      );
-      capitalizedProduct = capitalizedProductWords.join(" ");
-      return capitalizedProduct;
-    });
+    // replace underscores with spaces
+    let spacedProduct = product.replace("_", " ");
+
+    //capitalize each word
+    productWords = spacedProduct.split(" ");
+    capitalizedProductWords = productWords.map(
+      (word) => word.charAt(0).toUpperCase() + word.substring(1)
+    );
+    capitalizedProduct = capitalizedProductWords.join(" ");
+    return capitalizedProduct;
   };
-  let carouselProductsReformatted = reformat(carousel);
-  console.log("first set")
-  console.log(carouselProductsReformatted)
-  let gridProductsReformatted = reformat(grid);
-  console.log("2nd set")
-  let sidebarProductsReformatted = reformat(sidebar);
-  console.log("3rd set")
+
+  // We're trying to create a function that encapsulated [product].map([the function map is calling])
 
   // const carouselProductsReformatted = carouselProducts.map((product) => { //anon
   //   // replace underscores with spaces
@@ -61,6 +49,11 @@ function formatProducts(carousel, grid, sidebar) {
   //   capitalizedProduct = capitalizedProductWords.join(" ");
   //   return capitalizedProduct;
   // });
+
+  //.map is a callback function -- it needs to be passed a function
+  const carouselProductsReformatted = carouselProducts.map(reformatProd);
+  const gridProductsReformatted = gridProducts.map(reformatProd);
+  const sidebarProductsReformatted = sidebarProducts.map(reformatProd);
 
   return [
     carouselProductsReformatted,
