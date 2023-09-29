@@ -15,7 +15,7 @@
  */
 
 function greetingGenerator(customerName, storeName) {
-const hello = function () {
+const hello = function () { //3
     return "Hello ";
   };
 
@@ -23,7 +23,7 @@ function welcome() {
     return "Welcome to the ";
   }
 
-const customer = (customer) => `${customer}! `;
+const customer = (customer) => `${customer}! `; //2
 
   function store(storeName) {
     return `${storeName}!`;
@@ -34,7 +34,7 @@ let greeting = "";
   greeting += welcome();
   greeting += store(storeName);
 
-  return greeting;
+  return greeting;  //1
 }
 
 console.log(greetingGenerator("John Doe", "JavaScript Store"));
