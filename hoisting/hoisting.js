@@ -20,13 +20,16 @@ function greetingGenerator(customerName, storeName) {
   greeting += welcome();
   greeting += store(storeName);
 
-  const customer = (customer) => `${customer}! `;
+  //customer = (customer) => {return(`${customer}! `)}; //first attempt, simply changing it to a declared arrow function
+  function customer(customer){
+    return(`${customer}! `)
+  }
 
   function store(storeName) {
     return `${storeName}!`;
   }
 
-  const hello = function () {
+  function hello() {
     return "Hello ";
   };
 
