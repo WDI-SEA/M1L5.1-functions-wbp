@@ -23,9 +23,18 @@ const customerIds = [
  *
  * Can you spot the bug?  (hint: its just one line of code in this function)
  */
-function areAllIdsUnique(allIds) {
+/*function areAllIdsUnique(allIds) {
   for (let id of allIds) {
     const isThisIdUnique = isUnique(id, allIds);
+    if (!isThisIdUnique) {
+      return false;
+    }
+  }
+  return true;
+}*/
+function areAllIdsUnique(allIds) {
+  for (let id of allIds) {
+    const isThisIdUnique = isUnique(allIds, id);
     if (!isThisIdUnique) {
       return false;
     }
