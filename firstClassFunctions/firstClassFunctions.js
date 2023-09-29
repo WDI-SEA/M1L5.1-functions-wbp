@@ -96,26 +96,20 @@ module.exports = formatProducts;
 
 
 
-// Solved together with Weston in the morning
+//With Wes in the morning
 
-// function calculatePriceAfterShippingRounded(itemPrice, salesTax, shippingPrice) {
-//   itemPriceAfterTax = itemPrice * (1 + salesTax);
-//   itemPriceAfterShipping = itemPriceAfterTax + shippingPrice;
-//   return itemPriceAfterShipping.toFixed(2);
-// }
+// function formatProducts(carousel, grid, sidebar) {
 
-// function previewFullPrice(salesTax, shippingPrice) {
-//   const shirtPrice = 30.99;
-//   const sweatshirtPrice = 40.99;
-//   const smallPosterPrice = 15.99;
-//   const largePosterPrice = 22.99;
-//   const mugPrice = 12.99;
+//   function reformatProduct(product) {
+//       let spacedProduct = product.replace("_", " ");
+//       productWords = spacedProduct.split(" ");
+//       capitalizedProductWords = productWords.map(
+//         (word) => word.charAt(0).toUpperCase() + word.substring(1)
+//       );
+//       capitalizedProduct = capitalizedProductWords.join(" ");
+//       return capitalizedProduct;
+//   }
 
-// return [
-//   calculatePriceAfterShippingRounded(shirtPrice, salesTax, shippingPrice),
-//   calculatePriceAfterShippingRounded(sweatshirtPrice, salesTax, shippingPrice),
-//   calculatePriceAfterShippingRounded(smallPosterPrice, salesTax, shippingPrice),
-//   calculatePriceAfterShippingRounded(largePosterPrice, salesTax, shippingPrice),
-//   calculatePriceAfterShippingRounded(mugPrice, salesTax, shippingPrice),
-// ];
-// }
+// const carouselProductsReformatted = carouselProducts.map(reformatProduct);
+// const gridProductsReformatted = gridProducts.map(reformatProduct);
+// const sidebarProductsReformatted = sidebarProducts.map(reformatProduct);
