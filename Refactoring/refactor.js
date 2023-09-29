@@ -41,28 +41,4 @@ function previewFullPrice(salesTax, shippingPrice) {
   ];
 }
 
-
 module.exports = previewFullPrice;
-
-
-// shirtPriceAfterTax = shirtPrice * (1 + salesTax);
-// shirtPriceAfterShipping = shirtPriceAfterTax + shippingPrice;
-// shirtPriceAfterShippingRounded = shirtPriceAfterShipping.toFixed(2);
-
-// sweatshirtPriceAfterTax = sweatshirtPrice * (1 + salesTax);
-// sweatshirtPriceAfterShipping = sweatshirtPriceAfterTax + shippingPrice;
-// sweatshirtPriceAfterShippingRounded = sweatshirtPriceAfterShipping.toFixed(2);
-
-// smallPosterPriceAfterTax = smallPosterPrice * (1 + salesTax);
-// smallPosterPriceAfterShipping = smallPosterPriceAfterTax + shippingPrice;
-// smallPosterPriceAfterShippingRounded =
-//   smallPosterPriceAfterShipping.toFixed(2);
-
-// largePosterPriceAfterTax = largePosterPrice * (1 + salesTax);
-// largePosterPriceAfterShipping = largePosterPriceAfterTax + shippingPrice;
-// largePosterPriceAfterShippingRounded =
-//   largePosterPriceAfterShipping.toFixed(2);
-
-// mugPriceAfterTax = mugPrice * (1 + salesTax);
-// mugPriceAfterShipping = mugPriceAfterTax + shippingPrice;
-// mugPriceAfterShippingRounded = mugPriceAfterShipping.toFixed(2);
