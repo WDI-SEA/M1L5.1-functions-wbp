@@ -1,5 +1,5 @@
 const carouselProducts = ["t-shirt", "sweater", "polo"];
-const gridProducts = ["mug", "small_poster", "medium_poster", "large_poster"];
+const gridProducts = ["mug", "small_poster", "medium_poster", "large_poster"];//["mug","small","poster", "medium","poster", "large","poster"]
 const sidebarProducts = ["sweatpants", "shorts", "skirt", "baseball_cap"];
 
 /**
@@ -17,45 +17,28 @@ const sidebarProducts = ["sweatpants", "shorts", "skirt", "baseball_cap"];
  * Can you refactor this code to be less repetitive?
  */
 
+function betterFormat(position){
+  let newPos = position.map((product) => {
+    // replace underscores with spaces
+    let spacedProduct = product.replace("_", " ");
+    //capitalize each word
+    productWords = spacedProduct.split(" ");
+    capitalizedProductWords = productWords.map(
+      (word) => word.charAt(0).toUpperCase() + word.substring(1)
+    );
+    capitalizedProduct = capitalizedProductWords.join(" ");
+    return capitalizedProduct;
+  });
+    return newPos;
+}
+
+
 function formatProducts(carousel, grid, sidebar) {
-  const carouselProductsReformatted = carouselProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
+  const carouselProductsReformatted = betterFormat(carouselProducts);
 
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
+  const gridProductsReformatted = betterFormat(gridProducts);
 
-  const gridProductsReformatted = gridProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
-
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
-
-  const sidebarProductsReformatted = sidebarProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
-
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
+  const sidebarProductsReformatted = betterFormat(sidebarProducts);
 
   return [
     carouselProductsReformatted,
