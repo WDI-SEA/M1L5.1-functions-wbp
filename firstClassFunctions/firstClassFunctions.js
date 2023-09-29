@@ -22,6 +22,7 @@ function formatProducts(carousel, grid, sidebar) {
 
   const reformatProd = (product) => {
     //Here is the function .map is calling in the og code:
+    //It's telling what to do while mapping, almost like a loop
 
     // replace underscores with spaces
     let spacedProduct = product.replace("_", " ");
