@@ -19,10 +19,11 @@ const sidebarProducts = ["sweatpants", "shorts", "skirt", "baseball_cap"];
 
 function formatProducts(carousel, grid, sidebar) {
 
-  const reformatProduct = product = (product) => {
+  const reformatProduct = (product) => {
     // replace underscores with spaces
     let spacedProduct = product.replace("_", " ");
 
+//capitalize each word
  productWords = spacedProduct.split(" ");
 capitalizedProductWords = productWords.map(
       (word) => word.charAt(0).toUpperCase() + word.substring(1)
@@ -43,22 +44,6 @@ capitalizedProductWords = productWords.map(
   const carouselProductsReformatted = carouselProducts.map(reformatProduct);
   const gridProductsReformatted = gridProducts.map(reformatProduct);
   const sidebarProductsReformatted = sidebarProducts.map(reformatProduct);
-
-
-    //capitalize each word
-   
-   
-
-  
-
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  // });
 
   return [
     carouselProductsReformatted,
