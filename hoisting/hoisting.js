@@ -34,6 +34,7 @@ function greetingGenerator(customerName, storeName) {
   greeting += welcome();
   greeting += store(storeName);
 
+
   return greeting;
 }
 
