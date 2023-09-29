@@ -7,14 +7,14 @@
  *
  * Can you refactor it by writing functions that reduce repetition?
 */
+
 function previewFullPrice(salesTax, shippingPrice) {
   const shirtPrice = 30.99;
   const sweatshirtPrice = 40.99;
   const smallPosterPrice = 15.99;
   const largePosterPrice = 22.99;
   const mugPrice = 12.99;
-  
-  
+
   function priceAfterTax(price) {
     return price * (1 + salesTax);
   }
@@ -27,6 +27,10 @@ function previewFullPrice(salesTax, shippingPrice) {
     return priceAfterShipping(price).toFixed(2);
   }
 
+  // Single line function for everything
+  // function priceAfterShippingRounded(price) {
+  //   return (price * (1 + salesTax) + shippingPrice).toFixed(2);
+  // }
 
   return [
     shirtPriceAfterShippingRounded = priceAfterShippingRounded(shirtPrice),
