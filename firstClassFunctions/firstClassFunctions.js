@@ -17,45 +17,22 @@ const sidebarProducts = ["sweatpants", "shorts", "skirt", "baseball_cap"];
  * Can you refactor this code to be less repetitive?
  */
 
+const reformat = (product) => {
+  let spacedProduct = product.replace("_", " ");
+  productWords = spacedProduct.split(" ");
+  capitalizedProductWords = productWords.map(
+    (word) => word.charAt(0).toUpperCase() + word.substring(1)
+  );
+  capitalizedProduct = capitalizedProductWords.join(" ");
+  return capitalizedProduct;
+}
+
 function formatProducts(carousel, grid, sidebar) {
-  const carouselProductsReformatted = carouselProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
+  const carouselProductsReformatted = carouselProducts.map(reformat);
 
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
+  const gridProductsReformatted = gridProducts.map(reformat);
 
-  const gridProductsReformatted = gridProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
-
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
-
-  const sidebarProductsReformatted = sidebarProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
-
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
+  const sidebarProductsReformatted = sidebarProducts.map(reformat);
 
   return [
     carouselProductsReformatted,
@@ -67,3 +44,60 @@ function formatProducts(carousel, grid, sidebar) {
 console.log(formatProducts(carouselProducts, gridProducts, sidebarProducts));
 
 module.exports = formatProducts;
+
+
+
+///////////////////////////////////////
+
+
+
+// function formatProducts(carousel, grid, sidebar) {
+//   const carouselProductsReformatted = carouselProducts.map((product) => {
+//     // replace underscores with spaces
+//     let spacedProduct = product.replace("_", " ");
+
+//     //capitalize each word
+//     productWords = spacedProduct.split(" ");
+//     capitalizedProductWords = productWords.map(
+//       (word) => word.charAt(0).toUpperCase() + word.substring(1)
+//     );
+//     capitalizedProduct = capitalizedProductWords.join(" ");
+//     return capitalizedProduct;
+//   });
+
+//   const gridProductsReformatted = gridProducts.map((product) => {
+//     // replace underscores with spaces
+//     let spacedProduct = product.replace("_", " ");
+
+//     //capitalize each word
+//     productWords = spacedProduct.split(" ");
+//     capitalizedProductWords = productWords.map(
+//       (word) => word.charAt(0).toUpperCase() + word.substring(1)
+//     );
+//     capitalizedProduct = capitalizedProductWords.join(" ");
+//     return capitalizedProduct;
+//   });
+
+//   const sidebarProductsReformatted = sidebarProducts.map((product) => {
+//     // replace underscores with spaces
+//     let spacedProduct = product.replace("_", " ");
+
+//     //capitalize each word
+//     productWords = spacedProduct.split(" ");
+//     capitalizedProductWords = productWords.map(
+//       (word) => word.charAt(0).toUpperCase() + word.substring(1)
+//     );
+//     capitalizedProduct = capitalizedProductWords.join(" ");
+//     return capitalizedProduct;
+//   });
+
+//   return [
+//     carouselProductsReformatted,
+//     gridProductsReformatted,
+//     sidebarProductsReformatted,
+//   ];
+// }
+
+// console.log(formatProducts(carouselProducts, gridProducts, sidebarProducts));
+
+// module.exports = formatProducts;
