@@ -27,7 +27,7 @@ function greetingGenerator(customerName, storeName) {
   greeting += welcome();
   greeting += store(storeName);
 
-  //Named functions JS can hoist
+  //Named functions that JS can hoist
   function store(storeName) {
     return `${storeName}!`;
   }
