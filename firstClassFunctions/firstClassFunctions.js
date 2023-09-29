@@ -16,7 +16,7 @@ const sidebarProducts = ["sweatpants", "shorts", "skirt", "baseball_cap"];
  *
  * Can you refactor this code to be less repetitive?
  */
-
+/*
 function formatProducts(carousel, grid, sidebar) {
   const carouselProductsReformatted = carouselProducts.map((product) => {
     // replace underscores with spaces
@@ -56,7 +56,45 @@ function formatProducts(carousel, grid, sidebar) {
     capitalizedProduct = capitalizedProductWords.join(" ");
     return capitalizedProduct;
   });
+*/
+const fun = (word) => (word.charAt(0).toUpperCase() + word.substring(1))
+function formatProducts(carousel, grid, sidebar) {
+  const carouselProductsReformatted = carouselProducts.map((product) => {
+    // replace underscores with spaces
+    let spacedProduct = product.replace("_", " ");
 
+
+    
+    //capitalize each word
+    productWords = spacedProduct.split(" ");
+    capitalizedProductWords = productWords.map(fun);
+
+    capitalizedProduct = capitalizedProductWords.join(" ");
+    return capitalizedProduct;
+  });
+
+  const gridProductsReformatted = gridProducts.map((product) => {
+    // replace underscores with spaces
+    let spacedProduct = product.replace("_", " ");
+
+    //capitalize each word
+    productWords = spacedProduct.split(" ");
+    capitalizedProductWords = productWords.map(fun);
+    capitalizedProduct = capitalizedProductWords.join(" ");
+    return capitalizedProduct;
+  });
+
+  const sidebarProductsReformatted = sidebarProducts.map((product) => {
+    // replace underscores with spaces
+    let spacedProduct = product.replace("_", " ");
+
+    //capitalize each word
+    productWords = spacedProduct.split(" ");
+    capitalizedProductWords = productWords.map(fun);
+    capitalizedProduct = capitalizedProductWords.join(" ");
+    return capitalizedProduct;
+  });
+  
   return [
     carouselProductsReformatted,
     gridProductsReformatted,

@@ -14,34 +14,43 @@ function previewFullPrice(salesTax, shippingPrice) {
   const largePosterPrice = 22.99;
   const mugPrice = 12.99;
 
-  shirtPriceAfterTax = shirtPrice * (1 + salesTax);
+ /* shirtPriceAfterTax = shirtPrice * (1 + salesTax);
   shirtPriceAfterShipping = shirtPriceAfterTax + shippingPrice;
-  shirtPriceAfterShippingRounded = shirtPriceAfterShipping.toFixed(2);
+  shirtPriceAfterShippingRounded = shirtPriceAfterShipping.toFixed(2);*/
+  let fullShirtPrice = (shirtPrice *( 1+ salesTax) + shippingPrice).toFixed(2);
 
-  sweatshirtPriceAfterTax = sweatshirtPrice * (1 + salesTax);
+ /* sweatshirtPriceAfterTax = sweatshirtPrice * (1 + salesTax);
   sweatshirtPriceAfterShipping = sweatshirtPriceAfterTax + shippingPrice;
-  sweatshirtPriceAfterShippingRounded = sweatshirtPriceAfterShipping.toFixed(2);
+  sweatshirtPriceAfterShippingRounded = sweatshirtPriceAfterShipping.toFixed(2);*/
 
-  smallPosterPriceAfterTax = smallPosterPrice * (1 + salesTax);
+  let fullSweatshirtPrice = (sweatshirtPrice *( 1+ salesTax) + shippingPrice).toFixed(2);
+
+ /* smallPosterPriceAfterTax = smallPosterPrice * (1 + salesTax);
   smallPosterPriceAfterShipping = smallPosterPriceAfterTax + shippingPrice;
   smallPosterPriceAfterShippingRounded =
-    smallPosterPriceAfterShipping.toFixed(2);
+    smallPosterPriceAfterShipping.toFixed(2);*/
 
-  largePosterPriceAfterTax = largePosterPrice * (1 + salesTax);
+let fullSmallPosterPrice = (smallPosterPrice*( 1+ salesTax) + shippingPrice).toFixed(2);
+
+ /* largePosterPriceAfterTax = largePosterPrice * (1 + salesTax);
   largePosterPriceAfterShipping = largePosterPriceAfterTax + shippingPrice;
   largePosterPriceAfterShippingRounded =
-    largePosterPriceAfterShipping.toFixed(2);
+    largePosterPriceAfterShipping.toFixed(2);*/
+    
+let fullLargePosterPrice = (largePosterPrice*( 1+ salesTax) + shippingPrice).toFixed(2);
 
-  mugPriceAfterTax = mugPrice * (1 + salesTax);
+ /* mugPriceAfterTax = mugPrice * (1 + salesTax);
   mugPriceAfterShipping = mugPriceAfterTax + shippingPrice;
   mugPriceAfterShippingRounded = mugPriceAfterShipping.toFixed(2);
+*/
+let fullMugPrice = (mugPrice*( 1+ salesTax) + shippingPrice).toFixed(2);
 
   return [
-    shirtPriceAfterShippingRounded,
-    sweatshirtPriceAfterShippingRounded,
-    smallPosterPriceAfterShippingRounded,
-    largePosterPriceAfterShippingRounded,
-    mugPriceAfterShippingRounded,
+    fullShirtPrice,
+    fullSweatshirtPrice,
+    fullSmallPosterPrice,
+    fullLargePosterPrice,
+    fullMugPrice,
   ];
 }
 
