@@ -1,13 +1,13 @@
 const customerIds = [
   "54402779",
-  "39143786",
+  "39143786", //duplicate
   "77408236",
   "35736350",
   "07118545",
   "21452698",
   "55706737",
   "40258035",
-  "39143786",
+  "39143786", //duplicate
   "52017607",
 ];
 
@@ -25,8 +25,8 @@ const customerIds = [
  */
 function areAllIdsUnique(allIds) {
   for (let id of allIds) {
-    const isThisIdUnique = isUnique(id, allIds);
-    if (!isThisIdUnique) {
+    const isThisIdUnique = isUnique(id, allIds); //return false if not unique
+    if (isThisIdUnique) {
       return false;
     }
   }

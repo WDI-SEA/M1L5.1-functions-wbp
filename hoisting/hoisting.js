@@ -13,6 +13,13 @@
  */
 
 function greetingGenerator(customerName, storeName) {
+  //Manually hoising unnamed functions
+  const hello = function () {
+    return "Hello ";
+  };
+
+  const customer = (customer) => `${customer}! `;
+
   let greeting = "";
 
   greeting += hello();
@@ -20,15 +27,10 @@ function greetingGenerator(customerName, storeName) {
   greeting += welcome();
   greeting += store(storeName);
 
-  const customer = (customer) => `${customer}! `;
-
+  //Named functions JS can hoist
   function store(storeName) {
     return `${storeName}!`;
   }
-
-  const hello = function () {
-    return "Hello ";
-  };
 
   function welcome() {
     return "Welcome to the ";
