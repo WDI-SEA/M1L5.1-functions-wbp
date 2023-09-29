@@ -15,17 +15,12 @@ function previewFullPrice(salesTax, shippingPrice) {
   const largePosterPrice = 22.99;
   const mugPrice = 12.99;
 
-  function priceAfterTax(price) {
-    return price * (1 + salesTax);
+  function priceTotal(price) {
+    const priceAfterTax = price * (1 + salesTax);
+    const priceAfterShipping = priceAfterTax + shippingPrice;
+    return priceAfterShipping.toFixed(2);
   }
-  
-  function priceAfterShipping(price) {
-    return priceAfterTax(price) + shippingPrice;
-  }
-  
-  function priceAfterShippingRounded(price) {
-    return priceAfterShipping(price).toFixed(2);
-  }
+
 
   // Single line function for everything
   // function priceAfterShippingRounded(price) {
@@ -33,11 +28,11 @@ function previewFullPrice(salesTax, shippingPrice) {
   // }
 
   return [
-    shirtPriceAfterShippingRounded = priceAfterShippingRounded(shirtPrice),
-    sweatshirtPriceAfterShippingRounded = priceAfterShippingRounded(sweatshirtPrice),
-    smallPosterPriceAfterShippingRounded = priceAfterShippingRounded(smallPosterPrice),
-    largePosterPriceAfterShippingRounded = priceAfterShippingRounded(largePosterPrice),
-    mugPriceAfterShippingRounded = priceAfterShippingRounded(mugPrice),
+    priceTotal(shirtPrice),
+    priceTotal(sweatshirtPrice),
+    priceTotal(smallPosterPrice),
+    priceTotal(largePosterPrice),
+    priceTotal(mugPrice)
   ];
 }
 
