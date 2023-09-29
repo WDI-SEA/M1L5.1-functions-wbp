@@ -95,7 +95,6 @@ module.exports = formatProducts;
 
 
 
-
 //With Wes in the morning
 
 // function formatProducts(carousel, grid, sidebar) {
