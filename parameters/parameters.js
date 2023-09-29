@@ -21,11 +21,11 @@ const customerIds = [
  *
  * (39143786) exists twice in the input list, so the call on line 36 should return false
  *
- * Can you spot the bug?  (hint: its just one line of code in this function)
+ * Can you spot the bug?  (hint: it's just one line of code in this function)
  */
 function areAllIdsUnique(allIds) {
   for (let id of allIds) {
-    const isThisIdUnique = isUnique(id, allIds);
+    const isThisIdUnique = isUnique(allIds, id);
     if (!isThisIdUnique) {
       return false;
     }
