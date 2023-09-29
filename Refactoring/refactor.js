@@ -8,41 +8,28 @@
  * Can you refactor it by writing functions that reduce repetition?
  */
 function previewFullPrice(salesTax, shippingPrice) {
-  const shirtPrice = 30.99;
-  const sweatshirtPrice = 40.99;
-  const smallPosterPrice = 15.99;
-  const largePosterPrice = 22.99;
-  const mugPrice = 12.99;
+  //Create an object with the items (keys) and their price
+  const items = {
+    "shirtPrice" : 30.99,
+    "sweatshirtPrice" : 40.99,
+    "smallPosterPrice" : 15.99,
+    "largePosterPrice" : 22.99,
+    "mugPrice" : 12.99};
 
-  shirtPriceAfterTax = shirtPrice * (1 + salesTax);
-  shirtPriceAfterShipping = shirtPriceAfterTax + shippingPrice;
-  shirtPriceAfterShippingRounded = shirtPriceAfterShipping.toFixed(2);
+  //Create an array to hold the final calculated prices
+  const allPricesAfterShippingRounded =[];
 
-  sweatshirtPriceAfterTax = sweatshirtPrice * (1 + salesTax);
-  sweatshirtPriceAfterShipping = sweatshirtPriceAfterTax + shippingPrice;
-  sweatshirtPriceAfterShippingRounded = sweatshirtPriceAfterShipping.toFixed(2);
+  //For each item/price pair in the items object, calculate the final price then append to final prices array
+  for (let item in items){
+    let priceAfterTax = items[item] * (1 + salesTax);
+    let priceAfterShipping = priceAfterTax + shippingPrice;
+    let priceAfterShippingRounded = priceAfterShipping.toFixed(2);
+    allPricesAfterShippingRounded.push(priceAfterShippingRounded);
+  }
 
-  smallPosterPriceAfterTax = smallPosterPrice * (1 + salesTax);
-  smallPosterPriceAfterShipping = smallPosterPriceAfterTax + shippingPrice;
-  smallPosterPriceAfterShippingRounded =
-    smallPosterPriceAfterShipping.toFixed(2);
-
-  largePosterPriceAfterTax = largePosterPrice * (1 + salesTax);
-  largePosterPriceAfterShipping = largePosterPriceAfterTax + shippingPrice;
-  largePosterPriceAfterShippingRounded =
-    largePosterPriceAfterShipping.toFixed(2);
-
-  mugPriceAfterTax = mugPrice * (1 + salesTax);
-  mugPriceAfterShipping = mugPriceAfterTax + shippingPrice;
-  mugPriceAfterShippingRounded = mugPriceAfterShipping.toFixed(2);
-
-  return [
-    shirtPriceAfterShippingRounded,
-    sweatshirtPriceAfterShippingRounded,
-    smallPosterPriceAfterShippingRounded,
-    largePosterPriceAfterShippingRounded,
-    mugPriceAfterShippingRounded,
-  ];
+  //Return the final prices array (call the array, not an array of variables)
+  return allPricesAfterShippingRounded;
 }
 
 module.exports = previewFullPrice;
+

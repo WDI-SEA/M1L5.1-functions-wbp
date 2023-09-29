@@ -18,7 +18,12 @@ const sidebarProducts = ["sweatpants", "shorts", "skirt", "baseball_cap"];
  */
 
 function formatProducts(carousel, grid, sidebar) {
-  const carouselProductsReformatted = carouselProducts.map((product) => {
+// arrow functions drop 'function' and add arrow
+
+  const reformatProd = (product) => {
+    //Here is the function .map is calling in the og code:
+    //It's telling what to do while mapping, almost like a loop
+
     // replace underscores with spaces
     let spacedProduct = product.replace("_", " ");
 
@@ -29,33 +34,27 @@ function formatProducts(carousel, grid, sidebar) {
     );
     capitalizedProduct = capitalizedProductWords.join(" ");
     return capitalizedProduct;
-  });
+  };
 
-  const gridProductsReformatted = gridProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
+  // We're trying to create a function that encapsulated [product].map([the function map is calling])
 
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
+  // const carouselProductsReformatted = carouselProducts.map((product) => { //anon
+  //   // replace underscores with spaces
+  //   let spacedProduct = product.replace("_", " ");
 
-  const sidebarProductsReformatted = sidebarProducts.map((product) => {
-    // replace underscores with spaces
-    let spacedProduct = product.replace("_", " ");
+  //   //capitalize each word
+  //   productWords = spacedProduct.split(" ");
+  //   capitalizedProductWords = productWords.map(
+  //     (word) => word.charAt(0).toUpperCase() + word.substring(1)
+  //   );
+  //   capitalizedProduct = capitalizedProductWords.join(" ");
+  //   return capitalizedProduct;
+  // });
 
-    //capitalize each word
-    productWords = spacedProduct.split(" ");
-    capitalizedProductWords = productWords.map(
-      (word) => word.charAt(0).toUpperCase() + word.substring(1)
-    );
-    capitalizedProduct = capitalizedProductWords.join(" ");
-    return capitalizedProduct;
-  });
+  //.map is a callback function -- it needs to be passed a function
+  const carouselProductsReformatted = carouselProducts.map(reformatProd);
+  const gridProductsReformatted = gridProducts.map(reformatProd);
+  const sidebarProductsReformatted = sidebarProducts.map(reformatProd);
 
   return [
     carouselProductsReformatted,
