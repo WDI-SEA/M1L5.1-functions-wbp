@@ -111,3 +111,5 @@ module.exports = greetingGenerator;
 // console.log(greetingGenerator("John Doe", "JavaScript Store"));
 
 // module.exports = greetingGenerator;
+
+// Wes's code here: https://github.com/weston-bailey/M1L5.1-functions-wbp
