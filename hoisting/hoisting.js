@@ -10,29 +10,29 @@
  *
  * Without changing any code (only re-ordering the lines), can you fix this
  * file so that it returns the correct string?
+ * 
+ * npx jest ./hoisting/hoisting.test.js
  */
 
 function greetingGenerator(customerName, storeName) {
-  let greeting = "";
+const hello = function () {
+    return "Hello ";
+  };
 
-  greeting += hello();
-  greeting += customer(customerName);
-  greeting += welcome();
-  greeting += store(storeName);
+function welcome() {
+    return "Welcome to the ";
+  }
 
-  const customer = (customer) => `${customer}! `;
+const customer = (customer) => `${customer}! `;
 
   function store(storeName) {
     return `${storeName}!`;
   }
-
-  const hello = function () {
-    return "Hello ";
-  };
-
-  function welcome() {
-    return "Welcome to the ";
-  }
+let greeting = "";
+  greeting += hello();
+  greeting += customer(customerName);
+  greeting += welcome();
+  greeting += store(storeName);
 
   return greeting;
 }
