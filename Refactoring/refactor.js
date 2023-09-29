@@ -8,7 +8,7 @@
  * Can you refactor it by writing functions that reduce repetition?
  */
 
-// need 3 functions
+// need functions to do math
 //calculate price after tax pass 2 var
 //calculate price after shiping with new afterTax price
 //round the price of after shiping to .00
@@ -18,7 +18,7 @@ function priceAfter(item, tax, shipping){
   return total;
 }
 
-console.log(priceAfter(30.99,0.08, 4.0));
+//console.log(priceAfter(30.99,0.08, 4.0));
 
 function previewFullPrice(salesTax, shippingPrice) {
   const shirtPrice = 30.99;
@@ -27,27 +27,15 @@ function previewFullPrice(salesTax, shippingPrice) {
   const largePosterPrice = 22.99;
   const mugPrice = 12.99;
 
-  shirtPriceAfterTax = shirtPrice * (1 + salesTax);
-  shirtPriceAfterShipping = shirtPriceAfterTax + shippingPrice;
-  shirtPriceAfterShippingRounded = shirtPriceAfterShipping.toFixed(2);
+  shirtPriceAfterShippingRounded = priceAfter(shirtPrice,salesTax,shippingPrice);
 
-  // shirtPriceAfterShippingRounded = priceAfter(shippingPrice,salesTax,shippingPrice);
+  sweatshirtPriceAfterShippingRounded = priceAfter(sweatshirtPrice,salesTax,shippingPrice);
 
-  sweatshirtPriceAfterTax = sweatshirtPrice * (1 + salesTax);
-  sweatshirtPriceAfterShipping = sweatshirtPriceAfterTax + shippingPrice;
-  sweatshirtPriceAfterShippingRounded = sweatshirtPriceAfterShipping.toFixed(2);
+  smallPosterPriceAfterShippingRounded = priceAfter(smallPosterPrice,salesTax,shippingPrice);
 
-  smallPosterPriceAfterTax = smallPosterPrice * (1 + salesTax);
-  smallPosterPriceAfterShipping = smallPosterPriceAfterTax + shippingPrice;
-  smallPosterPriceAfterShippingRounded = smallPosterPriceAfterShipping.toFixed(2);
+  largePosterPriceAfterShippingRounded = priceAfter(largePosterPrice,salesTax,shippingPrice);
 
-  largePosterPriceAfterTax = largePosterPrice * (1 + salesTax);
-  largePosterPriceAfterShipping = largePosterPriceAfterTax + shippingPrice;
-  largePosterPriceAfterShippingRounded = largePosterPriceAfterShipping.toFixed(2);
-
-  mugPriceAfterTax = mugPrice * (1 + salesTax);
-  mugPriceAfterShipping = mugPriceAfterTax + shippingPrice;
-  mugPriceAfterShippingRounded = mugPriceAfterShipping.toFixed(2);
+  mugPriceAfterShippingRounded = priceAfter(mugPrice,salesTax,shippingPrice);
 
   return [
     shirtPriceAfterShippingRounded,
