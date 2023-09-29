@@ -113,3 +113,10 @@ module.exports = formatProducts;
 // const carouselProductsReformatted = carouselProducts.map(reformatProduct);
 // const gridProductsReformatted = gridProducts.map(reformatProduct);
 // const sidebarProductsReformatted = sidebarProducts.map(reformatProduct);
+
+// return [
+//   carouselProductsReformatted,
+//   gridProductsReformatted,
+//   sidebarProductsReformatted,
+//   ];
+// }
