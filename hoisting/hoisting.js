@@ -80,3 +80,34 @@ module.exports = greetingGenerator;
 
 
 
+// With Weston in the morning
+
+// function greetingGenerator(customerName, storeName) {
+//   let greeting = "";
+  
+//   const hello = function () {
+//     return "Hello ";
+//   };
+  
+//   const customer = (customer) => `${customer}! `;
+
+//   greeting += hello();
+//   greeting += customer(customerName);
+//   greeting += welcome();
+//   greeting += store(storeName);
+
+
+//   function store(storeName) {
+//     return `${storeName}!`;
+//   }
+
+//   function welcome() {
+//     return "Welcome to the ";
+//   }
+
+//   return greeting;
+// }
+
+// console.log(greetingGenerator("John Doe", "JavaScript Store"));
+
+// module.exports = greetingGenerator;
