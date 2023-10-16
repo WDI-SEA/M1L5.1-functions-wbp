@@ -28,12 +28,8 @@ function areAllIdsUnique(allIds) {
     const isThisIdUnique = isUnique(id, allIds);
     if (!isThisIdUnique) {
       return false;
-    }
-  }
-  return true;
+    } }
 }
-
-console.log(areAllIdsUnique(customerIds));
 
 /**
  * This is a function that checks if an ID is unique in the list.
