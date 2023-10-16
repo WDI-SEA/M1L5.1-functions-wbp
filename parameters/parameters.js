@@ -25,7 +25,8 @@ const customerIds = [
  */
 function areAllIdsUnique(allIds) {
   for (let id of allIds) {
-    const isThisIdUnique = isUnique(allIds, id);
+    const isThisIdUnique = isUnique(allIds, id
+      );
     if (!isThisIdUnique) {
       return false;
     }
