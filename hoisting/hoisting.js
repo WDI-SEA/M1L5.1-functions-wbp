@@ -22,13 +22,10 @@ function greetingGenerator(customerName, storeName) {
 
   const customer = (customer) => `${customer}! `;
 
-  function store(storeName) {
-    return `${storeName}!`;
-  }
-
   const hello = function () {
-    return "Hello ";
+    return "Hello";
   };
+
 
   function welcome() {
     return "Welcome to the ";
