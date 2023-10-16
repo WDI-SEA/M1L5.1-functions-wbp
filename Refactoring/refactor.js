@@ -7,6 +7,12 @@
  *
  * Can you refactor it by writing functions that reduce repetition?
  */
+
+function calculatePriceAfterShippingRounded(itemPrice, salesTax, shippingPrice) {
+  itemPriceAfterTax = itemPrice * (1 + salesTax)
+  itemPriceAfterTaxShipping = itemPriceAfterTaxShippping + shippingPrice
+  return itemPriceAfterTaxShipping.toFixed(2)
+  }
 function previewFullPrice(salesTax, shippingPrice) {
   const shirtPrice = 30.99;
   const sweatshirtPrice = 40.99;
