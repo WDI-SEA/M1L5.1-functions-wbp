@@ -26,7 +26,6 @@ function greetingGenerator(customerName, storeName) {
     return "Hello";
   };
 
-  
 
   function welcome() {
     return "Welcome to the ";
